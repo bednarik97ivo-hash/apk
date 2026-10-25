@@ -1,0 +1,24 @@
+KŘEPICKÁ CHASA – ANDROID TESTOVACÍ PROJEKT
+=========================================
+Webová adresa: https://gleaming-panda-825066.netlify.app/
+Databáze: stávající Supabase (není třeba migrace)
+
+JAK VYTVOŘIT APK (na počítači Windows/macOS/Linux)
+1. Rozbalte ZIP a nainstalujte Android Studio: https://developer.android.com/studio
+2. V Android Studiu zvolte Open a vyberte rozbalenou složku krepicka_chasa_android_projekt.
+3. Povolte Gradle Sync; Android Studio si stáhne Gradle a Android SDK komponenty dle potřeby.
+   Je-li vyžadováno, nastavte v Settings > Build Tools > Gradle lokální Gradle 8.11.1.
+4. Klikněte Build > Build Bundle(s) / APK(s) > Build APK(s).
+5. Vytvořený testovací soubor najdete v app/build/outputs/apk/debug/app-debug.apk.
+6. Přeneste soubor do Android telefonu a nainstalujte (s potvrzením instalace z tohoto zdroje).
+
+POZNÁMKY
+- APK pouze bezpečně zobrazuje veřejně dostupnou HTTPS aplikaci v Android WebView.
+- Zachovává stejnou databázi Supabase, nepoužívá ani neobsahuje tajné klíče.
+- Při prvním použití může být nutné znovu zadat Supabase Project URL a publishable key.
+- K fungování je třeba internet; chyba Failed to fetch se může objevit i v APK,
+  pokud je problém ve webové aplikaci, nastavení připojení nebo síti.
+- Nejde o finálně bezpečnostně auditovanou produkční aplikaci pro zdravotní údaje dětí.
+- Android SDK a Gradle nejsou v prostředí, kde byl projekt připraven, dostupné;
+  samotný APK zde nebyl sestaven ani otestován na Android zařízení.
+- Při přihlašování musí být k dispozici Android System WebView/Chrome.
